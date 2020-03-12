@@ -1,0 +1,49 @@
+#! /bin/sh
+
+log="Log: `/bin/date`"
+err="Error: `/bin/date`"
+
+
+thisdir=$PWD
+
+if [ "$OSTYPE" = "darwin10.0" ] && [ "$HOME" = "/Users/gbelanger" ]
+then
+    idxDir=$HOME/Documents/integ/idx
+    LFTP=/sw/bin/lftp
+elif [ "$HOST" = "isdabulk" ]
+then
+    idxDir=$HOME/integ/idx
+    LFTP=/usr/local/bin/lftp
+else
+    idxDir=.
+    LFTP=`which lftp`
+fi
+echo "$log : Using $LFTP"
+echo "$log : idxDir = $idxDir"
+echo "$log : cd $idxDir"
+cd $idxDir
+
+echo "$log : lftp -c 'open ftp://isdcarc.unige.ch/arc/rev_3/idx/scw/ && get GNRL-SCWG-GRP-IDX.fits'"
+echo "$log : Fetching general index file from the ISDC ..."
+$LFTP -c "open ftp://isdcarc.unige.ch/arc/rev_3/idx/scw/ && get GNRL-SCWG-GRP-IDX.fits"
+
+if [ ! -s GNRL-SCWG-GRP-IDX.fits ] ; then 
+   echo "$err : Fetch unsuccessful!"
+   rm GNRL-SCWG-GRP-IDX.fits
+   exit -1 
+fi
+
+if [ -f GNRL-SCWG-GRP-IDX.fits.gz ] && [ -f GNRL-SCWG-GRP-IDX.fits ] ; then
+    echo "$log : deleting old index file"
+    /bin/rm GNRL-SCWG-GRP-IDX.fits.gz
+    echo "$log : gzipping GNRL-SCWG-GRP-IDX.fits"
+    /usr/bin/gzip GNRL-SCWG-GRP-IDX.fits
+    touch GNRL-SCWG-GRP-IDX.fits.gz
+    echo "$log : done"
+else
+    /usr/bin/gzip GNRL-SCWG-GRP-IDX.fits
+    touch GNRL-SCWG-GRP-IDX.fits.gz    
+    echo "$log : done"
+fi
+
+cd $thisdir
