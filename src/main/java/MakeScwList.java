@@ -8,11 +8,6 @@ import java.net.UnknownHostException;
 import java.text.DecimalFormat;
 import java.util.UUID;
 
-import gb.esac.integral.IntegralException;
-import gb.esac.integral.PointingListWriter;
-import gb.esac.integral.ScwList;
-import gb.esac.integral.ScwListMaker;
-import gb.esac.io.MyFile;
 import jsky.coords.wcscon;
 import nom.tam.fits.Fits;
 import nom.tam.fits.ImageHDU;
