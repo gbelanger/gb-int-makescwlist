@@ -19,7 +19,7 @@ public class MakeScwList {
 
     // Class variables
     // General
-    private static String version = "5.0";
+    private static String version = "5.1";
     private static String sep = File.separator;
     private static String homeDir = System.getProperty("user.home");
     private static String osName = System.getProperty("os.name");
@@ -90,131 +90,131 @@ public class MakeScwList {
 
     // updatePointLis
     public static File updatePointLis() throws Exception {
-	String macDirName = homeDir+sep+"Documents"+sep+"integ"+sep+"idx";
-	String isdaDirName = homeDir+sep+"integ"+sep+"idx";
-	String intggwDirName = homeDir+sep+"integral"+sep+"osa_support";
-	boolean mac = false;
-	boolean isda = false;
-	boolean intggw = false;
-	File pointLisFile = null;
-	if ( homeDir.equals(sep+"Users"+sep+"gbelanger") && osName.equals("Mac OS X") ) {
-	    pointLisFile = new File(macDirName+sep+"point.lis");
-	    mac = true;
-	    logger.info("Working on gbelanger's MacBook Pro");
-	    logger.info("Checking directory "+macDirName);
-	}
-	else if ( hostName.contains("isdabulk") ) {
-	    pointLisFile = new File(isdaDirName+sep+"point.lis");
-	    isda = true;
-	    logger.info("Working on isdabulk");
-	    logger.info("Checking directory "+isdaDirName);
-	}
-	else if ( hostName.contains("n1grid") ) {
-	    pointLisFile = new File(intggwDirName+sep+"point.lis");
-	    intggw = true;
-	    logger.info("Working on ESAC grid");
-	    logger.info("Checking directory "+intggwDirName);
-	}
-	else pointLisFile = new File("point.lis");
-	long lastModif = pointLisFile.lastModified();
-	long currentTime = System.currentTimeMillis();
-	long threeDaysInMillis = 3*86400*1000;
-	long threeDaysAgo = currentTime - threeDaysInMillis;
-	if ( ! pointLisFile.exists() || lastModif < threeDaysAgo ) {
-	    //  Check if GNRL-SCWG-GRP-IDX.fits is there and its date
-	    File scwidxFile = null;
-	    String idxName = "GNRL-SCWG-GRP-IDX.fits.gz";
-	    if ( mac ) scwidxFile = new File(macDirName+sep+idxName);
-	    else if ( isda ) scwidxFile = new File(isdaDirName+sep+idxName);
-	    else if ( intggw ) scwidxFile = new File (intggwDirName+sep+idxName);
-	    else scwidxFile = new File(idxName);
-	    lastModif = scwidxFile.lastModified();
-	    if ( ! scwidxFile.exists() || lastModif < threeDaysAgo ) {
-		logger.info("Fetching latest general index GNRL-SCWG-GRP-IDX.fits from the ISDC ...");
-		boolean fetched = getscwidx();
-		if ( fetched ) {
-		    scwidxFile = new File(idxName);
-		    PointingListWriter.constructPointingList(scwidxFile);
+		String macDirName = homeDir+sep+"Documents"+sep+"integ"+sep+"idx";
+		String isdaDirName = homeDir+sep+"integ"+sep+"idx";
+		String intggwDirName = homeDir+sep+"integral"+sep+"osa_support";
+		boolean mac = false;
+		boolean isda = false;
+		boolean intggw = false;
+		File pointLisFile = null;
+		if ( homeDir.equals(sep+"Users"+sep+"gbelanger") && osName.equals("Mac OS X") ) {
+		    pointLisFile = new File(macDirName+sep+"point.lis");
+		    mac = true;
+		    logger.info("Working on gbelanger's MacBook Pro");
+		    logger.info("Checking directory "+macDirName);
+		}
+		else if ( hostName.contains("isdabulk") ) {
+		    pointLisFile = new File(isdaDirName+sep+"point.lis");
+		    isda = true;
+		    logger.info("Working on isdabulk");
+		    logger.info("Checking directory "+isdaDirName);
+		}
+		else if ( hostName.contains("n1grid") ) {
+		    pointLisFile = new File(intggwDirName+sep+"point.lis");
+		    intggw = true;
+		    logger.info("Working on ESAC grid");
+		    logger.info("Checking directory "+intggwDirName);
+		}
+		else pointLisFile = new File("point.lis");
+		long lastModif = pointLisFile.lastModified();
+		long currentTime = System.currentTimeMillis();
+		long threeDaysInMillis = 3*86400*1000;
+		long threeDaysAgo = currentTime - threeDaysInMillis;
+		if ( ! pointLisFile.exists() || lastModif < threeDaysAgo ) {
+		    //  Check if GNRL-SCWG-GRP-IDX.fits is there and its date
+		    File scwidxFile = null;
+		    String idxName = "GNRL-SCWG-GRP-IDX.fits.gz";
+		    if ( mac ) scwidxFile = new File(macDirName+sep+idxName);
+		    else if ( isda ) scwidxFile = new File(isdaDirName+sep+idxName);
+		    else if ( intggw ) scwidxFile = new File (intggwDirName+sep+idxName);
+		    else scwidxFile = new File(idxName);
+		    lastModif = scwidxFile.lastModified();
+		    if ( ! scwidxFile.exists() || lastModif < threeDaysAgo ) {
+			logger.info("Fetching latest general index GNRL-SCWG-GRP-IDX.fits from the ISDC ...");
+			boolean fetched = getscwidx();
+			if ( fetched ) {
+			    scwidxFile = new File(idxName);
+			    PointingListWriter.constructPointingList(scwidxFile);
+			}
+			else {
+			    logger.warn("Could not fetch file GNRL-SCWG-GRP-IDX.fits.gz");
+			    logger.info("Extracting 'point.lis' from jar");
+			    InputStream is = getFileFromJarAsStream("point.lis");
+			    inputStreamToFile(is, "point.lis");
+			}
+			pointLisFile = new File("point.lis");
+		    }
 		}
 		else {
-		    logger.warn("Could not fetch file GNRL-SCWG-GRP-IDX.fits.gz");
-		    logger.info("Extracting 'point.lis' from jar");
-		    InputStream is = getFileFromJarAsStream("point.lis");
-		    inputStreamToFile(is, "point.lis");
+		    logger.info("Found point.lis");
+		    printLastModified(pointLisFile);
 		}
-		pointLisFile = new File("point.lis");
-	    }
-	}
-	else {
-	    logger.info("Found point.lis");
-	    printLastModified(pointLisFile);
-	}
-	return pointLisFile;
+		return pointLisFile;
     }
     
     //  Effective area
     private static float[][] calculateNormalisedEffectiveArea() throws Exception {
-	BufferedDataInputStream effAreaFileAsStream = new BufferedDataInputStream(getFileFromJarAsStream("eff_area.fits.gz"));
-	Fits effAreaFits = new Fits(effAreaFileAsStream, true);
-	ImageHDU effAreaHDU = (ImageHDU) effAreaFits.getHDU(0);
-	float[][] effArea = (float[][]) effAreaHDU.getKernel();
-	float max = -Float.MAX_VALUE;
-	float min = Float.MAX_VALUE;
-	//  Determine min and max values
-	for ( int row=0; row < 400; row++ ) {
-	    for ( int col=0; col < 400; col++ ) {
-		max = Math.max(max, effArea[row][col]);
-		min = Math.min(min, effArea[row][col]);
-	    }
-	}
-	max = max - min;
-	//  Normalize to min=0 and max=1
-	normEffArea = new float[400][400];
-	for ( int row=0; row < 400; row++ ) {
-	    for ( int col=0; col < 400; col++ ) {
-		normEffArea[row][col] = (effArea[row][col] - min)/max;
-	    }
-	}
-	return normEffArea;
+		BufferedDataInputStream effAreaFileAsStream = new BufferedDataInputStream(getFileFromJarAsStream("eff_area.fits.gz"));
+		Fits effAreaFits = new Fits(effAreaFileAsStream, true);
+		ImageHDU effAreaHDU = (ImageHDU) effAreaFits.getHDU(0);
+		float[][] effArea = (float[][]) effAreaHDU.getKernel();
+		float max = -Float.MAX_VALUE;
+		float min = Float.MAX_VALUE;
+		//  Determine min and max values
+		for ( int row=0; row < 400; row++ ) {
+		    for ( int col=0; col < 400; col++ ) {
+			max = Math.max(max, effArea[row][col]);
+			min = Math.min(min, effArea[row][col]);
+		    }
+		}
+		max = max - min;
+		//  Normalize to min=0 and max=1
+		normEffArea = new float[400][400];
+		for ( int row=0; row < 400; row++ ) {
+		    for ( int col=0; col < 400; col++ ) {
+			normEffArea[row][col] = (effArea[row][col] - min)/max;
+		    }
+		}
+		return normEffArea;
     }
 
     //  Logger
     private static void configureLogger() throws IOException {
-	String loggerFilename= "logger.config";
-	InputStream log = getFileFromJarAsStream(loggerFilename);
-	UUID uuid = UUID.randomUUID();
-	String homeDir = System.getProperty("user.home");
-	loggerFilename = new String(homeDir+File.pathSeparator+"logger.config_"+uuid.toString());
-	loggerFile = new File(loggerFilename);
-	loggerFile.deleteOnExit();
-	inputStreamToFile(log, loggerFilename);
-        PropertyConfigurator.configure(loggerFilename);
+		String loggerFilename= "logger.config";
+		InputStream log = getFileFromJarAsStream(loggerFilename);
+		UUID uuid = UUID.randomUUID();
+		String homeDir = System.getProperty("user.home");
+		loggerFilename = new String(homeDir+sep+"logger.config_"+uuid.toString());
+		inputStreamToFile(log, loggerFilename);
+	    PropertyConfigurator.configure(loggerFilename);
+		(new File(loggerFilename)).deleteOnExit();
     }
     public static InputStream getFileFromJarAsStream(String name) {
-	return ClassLoader.getSystemResourceAsStream(name);
+		return ClassLoader.getSystemResourceAsStream(name);
     }
     private static void inputStreamToFile(InputStream io, String fileName) throws IOException {       
-	FileOutputStream fos = new FileOutputStream(fileName);
-	byte[] buf = new byte[256];
-	int read = 0;
-	while ((read = io.read(buf)) > 0) {
-	    fos.write(buf, 0, read);
-	}
-	fos.flush();
-	fos.close();
+		FileOutputStream fos = new FileOutputStream(fileName);
+		byte[] buf = new byte[256];
+		int read = 0;
+		while ((read = io.read(buf)) > 0) {
+		    fos.write(buf, 0, read);
+		}
+		fos.flush();
+		fos.close();
     }
 
     // Arguments
     private static void handleArguments(String[] args) throws Exception {
 	if (args.length < 3 || args.length > 7 ) {
-	    logger.info("Usage: java -jar MakeScwList ra dec distFromAxis");
-	    logger.info("       java -jar MakeScwList ra dec distFromAxis out.lis");
-	    logger.info("       java -jar MakeScwList ra dec distInL distInB");
-	    logger.info("       java -jar MakeScwList ra dec distInL distInB out.lis");
-	    logger.info("       java -jar MakeScwList ra dec distInL distInB firstRev");
-	    logger.info("       java -jar MakeScwList ra dec distInL distInB firstRev out.lis");
-	    logger.info("       java -jar MakeScwList ra dec distInL distInB firstRev lastRev");
-	    logger.info("       java -jar MakeScwList ra dec distInL distInB firstRev lastRev out.lis");
+	    logger.info("Usage:");
+	    logger.info(" java -jar MakeScwList ra dec distFromAxis");
+	    logger.info(" java -jar MakeScwList ra dec distFromAxis out.lis");
+	    logger.info(" java -jar MakeScwList ra dec distInL distInB");
+	    logger.info(" java -jar MakeScwList ra dec distInL distInB out.lis");
+	    logger.info(" java -jar MakeScwList ra dec distInL distInB firstRev");
+	    logger.info(" java -jar MakeScwList ra dec distInL distInB firstRev out.lis");
+	    logger.info(" java -jar MakeScwList ra dec distInL distInB firstRev lastRev");
+	    logger.info(" java -jar MakeScwList ra dec distInL distInB firstRev lastRev out.lis");
 	    System.exit(-1);
 	}
 	else if ( args.length == 3 ) {
