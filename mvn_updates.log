@@ -1,0 +1,145 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< MakeScwList:MakeScwList >-----------------------
+[INFO] Building Maven Quick Start Archetype 5.1
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- versions-maven-plugin:2.5:display-plugin-updates (default-cli) @ MakeScwList ---
+[INFO] artifact org.apache.maven.plugins:maven-enforcer-plugin: checking for updates from central
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/3.0.0-M2/maven-enforcer-plugin-3.0.0-M2.pom
+Progress (1): 2.7/6.8 kBProgress (1): 5.5/6.8 kBProgress (1): 6.8 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/3.0.0-M2/maven-enforcer-plugin-3.0.0-M2.pom (6.8 kB at 140 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/enforcer/enforcer/3.0.0-M2/enforcer-3.0.0-M2.pom
+Progress (1): 2.7/7.9 kBProgress (1): 5.5/7.9 kBProgress (1): 7.9 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/enforcer/enforcer/3.0.0-M2/enforcer-3.0.0-M2.pom (7.9 kB at 255 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/3.0.0-M1/maven-enforcer-plugin-3.0.0-M1.pom
+Progress (1): 2.7/7.2 kBProgress (1): 5.5/7.2 kBProgress (1): 7.2 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/3.0.0-M1/maven-enforcer-plugin-3.0.0-M1.pom (7.2 kB at 200 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/enforcer/enforcer/3.0.0-M1/enforcer-3.0.0-M1.pom
+Progress (1): 2.7/8.3 kBProgress (1): 5.5/8.3 kBProgress (1): 8.2/8.3 kBProgress (1): 8.3 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/enforcer/enforcer/3.0.0-M1/enforcer-3.0.0-M1.pom (8.3 kB at 269 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/1.4.1/maven-enforcer-plugin-1.4.1.pom
+Progress (1): 2.7/7.3 kBProgress (1): 5.5/7.3 kBProgress (1): 7.3 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/1.4.1/maven-enforcer-plugin-1.4.1.pom (7.3 kB at 253 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/enforcer/enforcer/1.4.1/enforcer-1.4.1.pom
+Progress (1): 2.7/7.2 kBProgress (1): 5.5/7.2 kBProgress (1): 7.2 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/enforcer/enforcer/1.4.1/enforcer-1.4.1.pom (7.2 kB at 206 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/1.4/maven-enforcer-plugin-1.4.pom
+Progress (1): 2.7/7.3 kBProgress (1): 5.5/7.3 kBProgress (1): 7.3 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/1.4/maven-enforcer-plugin-1.4.pom (7.3 kB at 159 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/enforcer/enforcer/1.4/enforcer-1.4.pom
+Progress (1): 2.7/7.2 kBProgress (1): 5.5/7.2 kBProgress (1): 7.2 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/enforcer/enforcer/1.4/enforcer-1.4.pom (7.2 kB at 239 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/1.3.1/maven-enforcer-plugin-1.3.1.pom
+Progress (1): 2.7/6.5 kBProgress (1): 5.5/6.5 kBProgress (1): 6.5 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/1.3.1/maven-enforcer-plugin-1.3.1.pom (6.5 kB at 202 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/enforcer/enforcer/1.3.1/enforcer-1.3.1.pom
+Progress (1): 2.7/12 kBProgress (1): 5.5/12 kBProgress (1): 8.2/12 kBProgress (1): 11/12 kB Progress (1): 12 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/enforcer/enforcer/1.3.1/enforcer-1.3.1.pom (12 kB at 335 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/1.3/maven-enforcer-plugin-1.3.pom
+Progress (1): 2.7/6.5 kBProgress (1): 5.5/6.5 kBProgress (1): 6.5 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/1.3/maven-enforcer-plugin-1.3.pom (6.5 kB at 196 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/enforcer/enforcer/1.3/enforcer-1.3.pom
+Progress (1): 2.7/11 kBProgress (1): 5.5/11 kBProgress (1): 8.2/11 kBProgress (1): 11/11 kB Progress (1): 11 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/enforcer/enforcer/1.3/enforcer-1.3.pom (11 kB at 357 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/1.2/maven-enforcer-plugin-1.2.pom
+Progress (1): 2.7/5.8 kBProgress (1): 5.5/5.8 kBProgress (1): 5.8 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/1.2/maven-enforcer-plugin-1.2.pom (5.8 kB at 224 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/enforcer/enforcer/1.2/enforcer-1.2.pom
+Progress (1): 2.7/11 kBProgress (1): 5.5/11 kBProgress (1): 8.2/11 kBProgress (1): 11/11 kB Progress (1): 11 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/enforcer/enforcer/1.2/enforcer-1.2.pom (11 kB at 333 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/1.1.1/maven-enforcer-plugin-1.1.1.pom
+Progress (1): 2.7/6.5 kBProgress (1): 5.5/6.5 kBProgress (1): 6.5 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/1.1.1/maven-enforcer-plugin-1.1.1.pom (6.5 kB at 209 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/enforcer/enforcer/1.1.1/enforcer-1.1.1.pom
+Progress (1): 2.7/11 kBProgress (1): 5.5/11 kBProgress (1): 8.2/11 kBProgress (1): 11/11 kB Progress (1): 11 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/enforcer/enforcer/1.1.1/enforcer-1.1.1.pom (11 kB at 355 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/1.1/maven-enforcer-plugin-1.1.pom
+Progress (1): 2.7/6.5 kBProgress (1): 5.5/6.5 kBProgress (1): 6.5 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/1.1/maven-enforcer-plugin-1.1.pom (6.5 kB at 64 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/enforcer/enforcer/1.1/enforcer-1.1.pom
+Progress (1): 2.7/11 kBProgress (1): 5.5/11 kBProgress (1): 8.2/11 kBProgress (1): 11/11 kB Progress (1): 11 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/enforcer/enforcer/1.1/enforcer-1.1.pom (11 kB at 109 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/1.0.1/maven-enforcer-plugin-1.0.1.pom
+Progress (1): 2.7/6.5 kBProgress (1): 5.5/6.5 kBProgress (1): 6.5 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/1.0.1/maven-enforcer-plugin-1.0.1.pom (6.5 kB at 251 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/enforcer/enforcer/1.0.1/enforcer-1.0.1.pom
+Progress (1): 2.7/11 kBProgress (1): 5.5/11 kBProgress (1): 8.2/11 kBProgress (1): 11/11 kB Progress (1): 11 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/enforcer/enforcer/1.0.1/enforcer-1.0.1.pom (11 kB at 354 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/1.0/maven-enforcer-plugin-1.0.pom
+Progress (1): 2.7/6.7 kBProgress (1): 5.5/6.7 kBProgress (1): 6.7 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/1.0/maven-enforcer-plugin-1.0.pom (6.7 kB at 240 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/enforcer/enforcer/1.0/enforcer-1.0.pom
+Progress (1): 2.7/12 kBProgress (1): 5.5/12 kBProgress (1): 8.2/12 kBProgress (1): 11/12 kB Progress (1): 12 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/enforcer/enforcer/1.0/enforcer-1.0.pom (12 kB at 372 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/17/maven-parent-17.pom
+Progress (1): 4.1/25 kBProgress (1): 8.2/25 kBProgress (1): 12/25 kB Progress (1): 16/25 kBProgress (1): 20/25 kBProgress (1): 25/25 kBProgress (1): 25 kB                      Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/17/maven-parent-17.pom (25 kB at 859 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/1.0-beta-1/maven-enforcer-plugin-1.0-beta-1.pom
+Progress (1): 4.1/5.6 kBProgress (1): 5.6 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/1.0-beta-1/maven-enforcer-plugin-1.0-beta-1.pom (5.6 kB at 38 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/enforcer/enforcer/1.0-beta-1/enforcer-1.0-beta-1.pom
+Progress (1): 4.1/11 kBProgress (1): 8.2/11 kBProgress (1): 11 kB                       Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/enforcer/enforcer/1.0-beta-1/enforcer-1.0-beta-1.pom (11 kB at 391 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/1.0-alpha-4/maven-enforcer-plugin-1.0-alpha-4.pom
+Progress (1): 4.1/5.8 kBProgress (1): 5.8 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/1.0-alpha-4/maven-enforcer-plugin-1.0-alpha-4.pom (5.8 kB at 206 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/enforcer/enforcer/1/enforcer-1.pom
+Progress (1): 4.1/9.8 kBProgress (1): 8.2/9.8 kBProgress (1): 9.8 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/enforcer/enforcer/1/enforcer-1.pom (9.8 kB at 307 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/1.0-alpha-3/maven-enforcer-plugin-1.0-alpha-3.pom
+Progress (1): 4.1/4.6 kBProgress (1): 4.6 kB                        Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/1.0-alpha-3/maven-enforcer-plugin-1.0-alpha-3.pom (4.6 kB at 172 kB/s)
+[INFO] 
+[INFO] All plugins with a version specified are using the latest versions.
+[INFO] 
+[WARNING] The following plugins do not have their version specified:
+[WARNING]   maven-assembly-plugin ..................... (from super-pom) 2.0.1
+[WARNING]   maven-clean-plugin .......................... (from super-pom) 2.2
+[WARNING]   maven-deploy-plugin ......................... (from super-pom) 2.4
+[WARNING]   maven-install-plugin ........................ (from super-pom) 2.2
+[WARNING]   maven-resources-plugin ...................... (from super-pom) 2.2
+[WARNING]   maven-site-plugin .................... (from super-pom) 2.0-beta-4
+[WARNING]   maven-surefire-plugin ..................... (from super-pom) 2.4.2
+[INFO] 
+[WARNING] Project does not define minimum Maven version, default is: 2.0
+[INFO] Plugins require minimum Maven version of: 3.0
+[INFO] Note: the super-pom from Maven 3.6.3 defines some of the plugin
+[INFO]       versions and may be influencing the plugins required minimum Maven
+[INFO]       version.
+[INFO] 
+[ERROR] Project does not define required minimum version of Maven.
+[ERROR] Update the pom.xml to contain maven-enforcer-plugin to
+[ERROR] force the maven version which is needed to build this project.
+[ERROR] See https://maven.apache.org/enforcer/enforcer-rules/requireMavenVersion.html
+[ERROR] Using the minimum version of Maven: 3.0
+[INFO] 
+[INFO] Require Maven 2.0.2 to use the following plugin updates:
+[INFO]   maven-site-plugin ........................................ 2.0-beta-7
+[INFO] 
+[INFO] Require Maven 2.0.4 to use the following plugin updates:
+[INFO]   maven-assembly-plugin .................................... 2.2-beta-1
+[INFO] 
+[INFO] Require Maven 2.0.6 to use the following plugin updates:
+[INFO]   maven-assembly-plugin .................................... 2.2-beta-5
+[INFO]   maven-clean-plugin .............................................. 2.5
+[INFO]   maven-deploy-plugin ........................................... 2.8.1
+[INFO]   maven-enforcer-plugin ......................................... 1.3.1
+[INFO]   maven-install-plugin .......................................... 2.5.1
+[INFO]   maven-jar-plugin ................................................ 2.4
+[INFO]   maven-resources-plugin .......................................... 2.6
+[INFO]   maven-site-plugin ............................................. 2.0.1
+[INFO]   maven-surefire-plugin ......................................... 2.4.3
+[INFO] 
+[INFO] Require Maven 2.0.9 to use the following plugin updates:
+[INFO]   maven-compiler-plugin ........................................... 3.1
+[INFO]   maven-surefire-plugin .......................................... 2.17
+[INFO] 
+[INFO] Require Maven 2.0.11 to use the following plugin updates:
+[INFO]   maven-assembly-plugin ........................................... 2.2
+[INFO] 
+[INFO] Require Maven 2.1.0 to use the following plugin updates:
+[INFO]   maven-site-plugin ............................................. 2.1.1
+[INFO] 
+[INFO] Require Maven 2.2.0 to use the following plugin updates:
+[INFO]   maven-site-plugin ............................................... 3.0
+[INFO] 
+[INFO] Require Maven 2.2.1 to use the following plugin updates:
+[INFO]   maven-assembly-plugin ........................................... 2.6
+[INFO]   maven-clean-plugin ............................................ 2.6.1
+[INFO]   maven-compiler-plugin ........................................... 3.3
+[INFO]   maven-deploy-plugin ........................................... 2.8.2
+[INFO]   maven-enforcer-plugin ...................................... 3.0.0-M3
+[INFO]   maven-install-plugin .......................................... 2.5.2
+[INFO]   maven-jar-plugin ................................................ 2.6
+[INFO]   maven-resources-plugin .......................................... 2.7
+[INFO]   maven-site-plugin ............................................... 3.4
+[INFO]   maven-surefire-plugin .......................................... 2.20
+[INFO] 
+[INFO] Require Maven 3.0 to use the following plugin updates:
+[INFO]   maven-assembly-plugin ......................................... 3.1.0
+[INFO]   maven-clean-plugin ............................................ 3.1.0
+[INFO]   maven-compiler-plugin ......................................... 3.7.0
+[INFO]   maven-jar-plugin .............................................. 3.1.0
+[INFO]   maven-resources-plugin ........................................ 3.0.2
+[INFO]   maven-site-plugin ............................................... 3.7
+[INFO]   maven-surefire-plugin ........................................ 2.21.0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.299 s
+[INFO] Finished at: 2020-04-01T20:48:43+02:00
+[INFO] ------------------------------------------------------------------------

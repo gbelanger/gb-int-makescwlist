@@ -1,11 +1,8 @@
-package gb.esac.integral;
-
 import java.awt.geom.Point2D;
 import java.io.File;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
-import gb.esac.io.AsciiDataFileReader;
 import jsky.coords.WorldCoords;
 import jsky.coords.wcscon;
 import org.apache.log4j.Logger;
